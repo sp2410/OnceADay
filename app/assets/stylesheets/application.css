@@ -1,0 +1,168 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require social-share-button 
+ */
+
+@import "social-share-button";
+
+
+ html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
+.navbar{
+	background-color: #fff;  
+	border: 0px solid;
+	margin-bottom: 0px;
+	top: 0;    
+	
+
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top; 
+
+}
+
+.navbar .navbar-collapse {
+  
+  
+  float: none;
+  vertical-align: top;  
+  
+}
+
+ul.nav.navbar-nav.navbar-left{
+	margin: 5px auto ;
+	
+}
+
+#myNavbar > ul > li > a{
+    color: #000;
+    
+}
+
+
+#myNavbar > ul > li > a:hover{
+	color: #fff;
+    background-color: #e53c35;
+}
+
+/* Style the tab */
+div.tab {
+    float: left;    
+    background-color: #2e2f30;
+    width: 30%;
+    min-height: 300px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button, a.tablinks {
+    display: block;
+    background-color: inherit;
+    color: #f7f7f7;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    font-family: 'Merriweather';
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #730e15;
+    color: white;
+}
+
+a.tablinks:hover {
+
+    background-color: #730e15;
+    color: white;
+
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #e53c35;
+}
+
+
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;    
+    width: 70%;
+    border-left: none;
+    min-height: 700px;
+    background-color: #2e2f30;
+    /*border: 2px solid #e53c35;*/
+
+}
+
+
+#herodiv{
+    margin-bottom: 20px;
+    min-height: 250px;    
+}
+
+#herodiv2{
+    height: 1px;           
+    background-color: #e53c35;
+}
+
+div.col-sm-12.col-md-12.col-lg-12{
+    padding: 0px;
+}
+
+hr.style5 {
+    border-top: 1px dotted #8c8b8b;
+}
+
+
+.w3-card{
+    background-color: #fff;
+    margin: 10px;
+    height: 250px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
+}
+
+div.col-sm-6.col-md-6.col-lg-6{
+    padding: 0px;
+}
+
+
+a.btn.btn-primary, input.btn.btn-primary{
+    background-color:  #e53c35;
+    border: 0px;
+    margin: 2px;
+}
+
+#section_contents{
+    height: 400px;
+}

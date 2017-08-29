@@ -1,0 +1,76 @@
+<div class = "col-sm-12 col-md-12 col-lg-12" style = "margin: 40px 0px;">
+	<strong><h1 style = "font-size: 50px; text-align: center; font-family: 'Merriweather', cursive;  padding: 10px; color: #e53c35; margin-bottom: 0px; ">
+	  <%= @post.title.upcase %>	  
+	</h1></strong>
+
+	<p style = "font-size: 14px; padding: 5px; font-family: 'Merriweather', cursive; margin: 1px; text-align: center;">
+	  
+	  <strong>By: <%= User.find_by_id(@post.user_id).name %></strong>
+	</p>
+
+	<p style = "font-size: 12px; padding: 5px; font-family: 'Merriweather', cursive; margin: 1px; text-align: center;">
+	  
+	  <strong><%= @post.posted_on %></strong>	  
+	</p>
+
+	<div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center; margin-top: 20px;">
+
+		<%= social_share_button_tag(@post.title, :image => "#{@post.heroimage}") %>
+
+	</div>
+
+	<% if isowner(@post) %>
+		<div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center; margin-top: 20px;">
+			<%= link_to 'Edit Post', edit_subject_post_path(@subject, @post), class: "btn btn-primary" %>
+			<%= link_to 'Add New Section', new_subject_post_section_path(@subject, @post), class: "btn btn-primary" %>
+		</div>
+	<% end %>
+
+
+	
+	
+	<% @post.sections.each do |section| %>
+
+	<div class = "col-sm-12 col-md-12 col-lg-12">
+
+		<div class = "col-sm-2 col-md-2 col-lg-2">
+		</div>
+
+		<div class = "col-sm-8 col-md-8 col-lg-8">
+			<% if section.content_type == 'Paragraph'%>
+				<p style = "font-size: 12px;  font-family: 'Merriweather', cursive; margin: 1px; text-align: justify;">					
+			  			<%= simple_format(section.contents) %>			  		
+				</p>				
+			<% elsif section.content_type == 'Image'%>			
+				<p style = "text-align: center; ">					
+					<%= image_tag section.external_url.url, height: 400 %>	  				
+				</p>			
+			<% elsif section.content_type == 'Code Snippet'%>
+				<div class = "col-sm-12 col-md-12 col-lg-12" style = "background: #333333; color: #fff; padding: 10px;">
+					<p style = "font-size: 10px;  margin: 1px; text-align: left; font-style: italic;">					
+				  		<%= simple_format(section.contents) %>			  		
+					</p>
+				</div>
+			<% end %>
+			<% if isowner(@post) %>
+				<div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center;">
+					<%= link_to 'Edit Section', edit_subject_post_section_path(@subject, @post, section), class: "btn btn-primary btn-xs" %>
+					<%= link_to 'Delete Section', subject_post_section_path(@subject, @post, section), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-xs" %>
+				</div>
+			<% end %>
+		</div>
+
+		<div class = "col-sm-2 col-md-2 col-lg-2">
+		</div>
+
+	</div>
+
+	<% end %>
+	<% if isowner(@post) %>
+		<div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center; margin-top: 20px;">
+			<%= link_to 'Edit Post', edit_subject_post_path(@subject, @post), class: "btn btn-primary" %>
+			<%= link_to 'Add New Section', new_subject_post_section_path(@subject, @post), class: "btn btn-primary" %>
+		</div>
+	<% end %>
+
+</div>

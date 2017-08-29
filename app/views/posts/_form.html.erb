@@ -1,0 +1,19 @@
+<%= bootstrap_form_for [@subject, @post]  do |form| %>     
+
+  <div class="field">  
+    <%= form.text_field :title, id: :post_title %>
+  </div>
+
+  <div class="field">  
+    <%= form.datetime_select :posted_on, id: :post_posted_on %>
+  </div>
+
+  <div class="field">      
+    <%= form.file_field :heroimage, id: :post_heroimage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create Post", class: "btn btn-primary" %>
+  </div>
+<% end %>
+

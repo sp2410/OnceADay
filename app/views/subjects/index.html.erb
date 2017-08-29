@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<div class = "col-sm-12 col-md-12 col-lg-12">
+
+    <div class = "col-sm-12 col-md-12 col-lg-12">
+    
+      <%= render "subjects/header"%>
+      
+    </div>
+
+    <div class = "col-sm-12 col-md-12 col-lg-12">
+      <%= render "subjects/sidetab"%>      
+    </div>
+
+    <div class = "col-sm-12 col-md-12 col-lg-12">
+    </div>
+
+    
+
+
+  </div>
+
+
+
+</div>
+
+
+<script>
+function openTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    console.log(cityName);
+
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+
+(function() {
+
+ init(); //on page load - call the function show first slide, hide the rest
+
+   function init() {
+      // This is to intialize with active slides and dot
+      document.getElementById("defaultOpen").click();
+
+  }
+
+})(jQuery);
+
+
+
+</script>
+     

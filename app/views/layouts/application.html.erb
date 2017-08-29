@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ONCE A DAY</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"  lazyload>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  lazyload>    
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" async></script>
+	
+  <!-- <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Great+Vibes|Baloo+Chettan|Damion|Heebo|Kaushan+Script|Ranga|Lobster|Raleway:400,800|Playfair+Display+SC|Anton" rel="stylesheet"  lazyload> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" lazyload>
+
+
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	
+  </head>
+
+  <body>
+
+    <%= render 'layouts/nav' %>  
+  
+
+  <!--   <div class = "container">
+      <%= content_tag :div, alert, class: "flash bg-danger" if alert %>
+      <%= content_tag :div, notice, class: "flash bg-success" if notice %>
+  
+    </div> -->
+    
+    <%= yield %>
+
+
+  
+
+  </body>
+</html>

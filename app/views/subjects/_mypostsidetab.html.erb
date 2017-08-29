@@ -1,0 +1,78 @@
+<div class = "col-sm-12 col-md-12 col-lg-12">
+
+	<div class="tab">
+
+		<% @subjects.each do |name|%>
+
+			<% if @temp == false %>
+				<button class="tablinks" onclick="openTab(event, '<%= name.title.split(' ')[0] %>')" id="defaultOpen"><%= name.title %></button>
+				<% @temp = true %>
+
+			<% else %>
+				<button class="tablinks" onclick="openTab(event, '<%= name.title.split(' ')[0] %>')"><%= name.title %></button>	
+			<% end %>
+
+		<% end %>
+
+		<%= link_to 'Add New Subject', new_subject_path, class: "tablinks" %>
+
+	</div>
+
+
+	<% @subjects.each do |name|%>
+		
+		<div id= <%= name.title.split(' ')[0] %> class="tabcontent">		  
+
+		<div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center;">
+		  	<%= link_to "Add New Post To #{name.title}", new_subject_post_path(name), class: "btn btn-primary" %>	  	
+		  </div>
+
+		 
+		  <% name.posts.each do |post| %>
+
+			  <% if post.user_id == current_user.id %>
+
+				  	<div class = "col-sm-6 col-md-6 col-lg-6" id = "postcard">
+
+					<%= link_to subject_post_path(name,post), target: :_blank do %>
+					  	<div class="w3-card">
+
+
+						  	<div class = "col-sm-12 col-md-12 col-lg-12" >
+						  		<div class = "col-sm-6 col-md-6 col-lg-6" style = "padding: 10px;" >				  		
+							  		<strong><p style = "font-size: 18px;  font-family: 'Merriweather', cursive; color: #e53c35;"><%= post.title.upcase %></p></strong>					  		
+							  		<strong><p style = "font-size: 14px;  font-family: 'Merriweather', cursive; ">By: <%= User.find_by_id(post.user_id).name %></p></strong>
+							  		
+							  		<p style = "font-size: 12px; font-family: 'Merriweather', cursive; color: #000; "><%= post.getparagraph(post) %> </p>					  		
+
+							  	</div>
+							  	<div class = "col-sm-6 col-md-6 col-lg-6" >	
+								  	
+									  	<% if post.heroimage.present? %>	  					
+						  					<%= image_tag post.heroimage.url(:thumb), height: 300 %>	  				
+						  				<% end %>
+						  			
+							  	</div>
+				  			</div>
+
+			  				
+						</div>
+					<% end %>
+
+				  	</div>	
+
+			  	<% end %>
+
+		  <% end %>
+
+		  
+		</div>
+
+	<% end %>
+
+</div>
+
+
+
+
+
