@@ -21,8 +21,9 @@
 
 	<% if isowner(@post) %>
 		<div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center; margin-top: 20px;">
-			<%= link_to 'Edit Post', edit_subject_post_path(@subject, @post), class: "btn btn-primary" %>
 			<%= link_to 'Add New Section', new_subject_post_section_path(@subject, @post), class: "btn btn-primary" %>
+			<%= link_to 'Edit Post', edit_subject_post_path(@subject, @post), class: "btn btn-primary" %>
+			
 		</div>
 	<% end %>
 
@@ -42,8 +43,10 @@
 			  			<%= simple_format(section.contents) %>			  		
 				</p>				
 			<% elsif section.content_type == 'Image'%>			
-				<p style = "text-align: center; ">					
-					<%= image_tag section.external_url.url, height: 400 %>	  				
+				<p style = "text-align: center;overflow-x: hidden;">
+				<div class = "col-sm-12 col-md-12 col-lg-12">					
+					<%= image_tag section.external_url.url, style: 'height:auto;width:100%;' %>	  				
+				</div>
 				</p>			
 			<% elsif section.content_type == 'Code Snippet'%>
 				<div class = "col-sm-12 col-md-12 col-lg-12" style = "background: #333333; color: #fff; padding: 10px;">
@@ -67,9 +70,9 @@
 
 	<% end %>
 	<% if isowner(@post) %>
-		<div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center; margin-top: 20px;">
-			<%= link_to 'Edit Post', edit_subject_post_path(@subject, @post), class: "btn btn-primary" %>
+		<div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center; margin-top: 20px;">			
 			<%= link_to 'Add New Section', new_subject_post_section_path(@subject, @post), class: "btn btn-primary" %>
+			<%= link_to 'Edit Post', edit_subject_post_path(@subject, @post), class: "btn btn-primary" %>
 		</div>
 	<% end %>
 
