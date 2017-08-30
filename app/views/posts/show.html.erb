@@ -45,7 +45,7 @@
 			<% elsif section.content_type == 'Image'%>			
 				<p style = "text-align: center;overflow-x: hidden;">
 				<div class = "col-sm-12 col-md-12 col-lg-12">					
-					<%= image_tag section.external_url.url, style: 'height:auto;width:100%; margin: 20px;' %>	  				
+					<%= image_tag section.external_url.url, style: 'height:auto;width:100%; margin: 20px auto;' %>	  				
 				</div>
 				</p>			
 			<% elsif section.content_type == 'Code Snippet'%>
