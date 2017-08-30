@@ -29,7 +29,7 @@
 
 	
 	
-	<% @post.sections.each do |section| %>
+	<% @post.sections.order('created_at').each do |section| %>
 
 	<div class = "col-sm-12 col-md-12 col-lg-12">
 
