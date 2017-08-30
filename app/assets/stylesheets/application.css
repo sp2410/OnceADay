@@ -27,6 +27,10 @@
     overflow-x: hidden; 
 }
 
+.icon-bar{
+    background-color: #fff;  
+}
+
 
 .navbar{
 	background-color: #fff;  
