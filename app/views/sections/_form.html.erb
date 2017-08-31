@@ -1,17 +1,29 @@
 <%= bootstrap_form_for [@subject, @post, @section]  do |form| %>     
 
   <div class="field">    
-    <%= form.select :content_type, ['Paragraph','Image','Code Snippet'], :label => "Section Type"  %>
+    <%= form.select :content_type, ['Paragraph','Code Snippet','Image','Video' ], :label => "Section Type"  %>
   </div>
 
-  <!-- 'Video','Audio' -->
-
+  <hr>
+  
+  <p style = "font-size: 14px; padding: 5px; font-family: 'Merriweather', cursive; margin: 1px; text-align: center;color: #e53c35;">For Paragraph or Code Only</p>
   <div class="field">    
     <%= form.text_area :contents, id: :section_contents, :label => "Use for Paragraph or Code (Leave Blank for Image)" %>
   </div>
 
+  <hr>
+  
+  <p style = "font-size: 14px; padding: 5px; font-family: 'Merriweather', cursive; margin: 1px; text-align: center;color: #e53c35;">For Image Only</p>
   <div class="field">    
     <%= form.file_field :external_url, id: :section_external_url, :label => "Use for Image (Leave for Paragraph or Code)" %>
+  </div>
+
+  <hr>
+
+  <p style = "font-size: 14px; padding: 5px; font-family: 'Merriweather', cursive; margin: 1px; text-align: center;color: #e53c35;">For Video Only</p>
+
+  <div class="field">        
+    <%= form.text_field :video_url, :placeholder => "Add Embed link of youtube video" %>
   </div>
 
   <div class="actions">

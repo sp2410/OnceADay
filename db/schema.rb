@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829211329) do
+ActiveRecord::Schema.define(version: 20170830235913) do
 
   create_table "audios", force: :cascade do |t|
     t.string "contenturl"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20170829211329) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "post_id"
+    t.string "video_url"
     t.index ["post_id"], name: "index_sections_on_post_id"
   end
 

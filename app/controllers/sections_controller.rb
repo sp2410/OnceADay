@@ -93,6 +93,6 @@ class SectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def section_params
-      params.require(:section).permit(:content_type, :contents, :external_url)
+      params.require(:section).permit(:content_type, :contents, :external_url, :video_url)
     end
 end
