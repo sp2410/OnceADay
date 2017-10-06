@@ -11,7 +11,7 @@ class Post < ApplicationRecord
 		if post.sections.present?
 			section = post.sections.where('content_type = ?','Paragraph').first.contents
 			p section
-			return section[0..200] + "..."
+			return simple_format(section[0..200]) + "..."
 		end
 
 		return "Post in Progress"
