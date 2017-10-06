@@ -41,7 +41,7 @@
 					  		<strong><p style = "font-size: 18px;  font-family: 'Merriweather', cursive; color: #e53c35;"><%= post.title.upcase %></p></strong>					  		
 					  		<strong><p style = "font-size: 14px;  font-family: 'Merriweather', cursive; ">By: <%= User.find_by_id(post.user_id).name %></p></strong>
 					  		
-					  		<p style = "font-size: 12px; font-family: 'Merriweather', cursive; color: #000; "><%= post.getparagraph(post) %> </p>					  		
+					  		<p style = "font-size: 12px; font-family: 'Merriweather', cursive; color: #000; "><%= simple_format(post.getparagraph(post)) %> </p>					  		
 
 					  	</div>
 					  	<div class = "col-sm-6 col-md-6 col-lg-6" >	
