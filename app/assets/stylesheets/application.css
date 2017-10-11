@@ -91,7 +91,7 @@ div.tab button, a.tablinks {
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 70%;
+    font-size: 1em;
     font-family: 'Merriweather';
 }
 
