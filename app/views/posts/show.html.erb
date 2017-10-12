@@ -55,9 +55,9 @@
 				</div>
 				
 			<% elsif section.content_type == 'Code Snippet'%>
-				<div class = "col-sm-12 col-md-12 col-lg-12" style = "background: #333333; color: #fff; padding: 10px;">
-					<p style = "font-size: 40px;  margin: 1px; text-align: left; font-style: italic;">					
-				  		<%= simple_format(section.contents) %>			  		
+				<div class = "col-sm-12 col-md-12 col-lg-12" style = "background: black; color: #fff; padding: 10px;">
+					<p style = "font-size: 40px;  margin: 1px; font-style: italic;">					
+				  		<pre><%= section.contents %></pre>
 					</p>
 				</div>
 			<% end %>
