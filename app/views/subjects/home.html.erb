@@ -134,8 +134,8 @@
               <% end %>
               <% if isowner(@random_post) %>
                 <div class = "col-sm-12 col-md-12 col-lg-12" style = "text-align: center; margin-top: 20px;">     
-                  <%= link_to 'Add New Section', new_subject_post_section_path(@subject, @random_post), class: "btn btn-primary" %>
-                  <%= link_to 'Edit Post', edit_subject_post_path(@subject, @random_post), class: "btn btn-primary" %>
+                  <%= link_to 'Add New Section', new_subject_post_section_path(Subject.find_by_id(@random_post.subject_id), @random_post), class: "btn btn-primary" %>
+                  <%= link_to 'Edit Post', edit_subject_post_path(Subject.find_by_id(@random_post.subject_id), @random_post), class: "btn btn-primary" %>
                 </div>
               <% end %>
 
