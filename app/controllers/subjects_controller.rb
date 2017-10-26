@@ -9,6 +9,10 @@ class SubjectsController < ApplicationController
 
   end
 
+  def home
+    @random_post = Post.offset(rand(Post.count)).first
+  end
+
   # GET /subjects/1
   # GET /subjects/1.json
   def show

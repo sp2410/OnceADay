@@ -14,30 +14,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" async></script>
-	
-  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Great+Vibes|Baloo+Chettan|Damion|Heebo|Kaushan+Script|Ranga|Lobster|Raleway:400,800|Playfair+Display+SC|Anton" rel="stylesheet"  lazyload>
-
+	  
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" lazyload>
 
 
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <meta name="description" content="Once a day is a blogging platform designed for enabling technical communications and sharing what you are learning with everyone.">
+ <meta content="Once A Day Today Blog" property="og:title" />
 	
   </head>
 
   <body>
 
     <%= render 'layouts/nav' %>  
-  
-
-  <!--   <div class = "container">
-      <%= content_tag :div, alert, class: "flash bg-danger" if alert %>
-      <%= content_tag :div, notice, class: "flash bg-success" if notice %>
-  
-    </div> -->
     
     <%= yield %>
-
-
   
 
   </body>
