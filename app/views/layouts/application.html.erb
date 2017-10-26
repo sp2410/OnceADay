@@ -2,13 +2,25 @@
 <html>
   <head>
     <title>ONCE A DAY</title>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108766751-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108766751-1');
+      </script>
+
+
     <%= favicon_link_tag 'https://s3-us-west-2.amazonaws.com/wacbacassetsdonttouch/wacbacassets/onceadaylogo.png' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"  lazyload>
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"  lazyload>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  lazyload>    
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" >
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
