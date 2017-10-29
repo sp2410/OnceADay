@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_presence_of :name
+
+
+
+    def self.emails_of_all_intrested_users
+    	users = User.where(:receive_email => true).pluck(:email)
+    	return users
+    end
+
 end

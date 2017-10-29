@@ -10,7 +10,8 @@ class SubjectsController < ApplicationController
   end
 
   def home
-    @random_post = Post.offset(rand(Post.count)).first
+    @mailed_post = MailedPost.last
+    @random_post = (@mailed_post == nil) ? (Post.offset(rand(Post.count)).first) : Post.find_by_id(@mailed_post.post_id)
   end
 
   # GET /subjects/1

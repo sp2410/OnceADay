@@ -33,6 +33,9 @@ gem "devise"
 
 gem 'social-share-button', github: "huacnlee/social-share-button"
 
+gem 'sendgrid-ruby'
+# gem 'whenever', require: false
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

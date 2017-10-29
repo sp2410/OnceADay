@@ -17,4 +17,12 @@ class Post < ApplicationRecord
 		return "Post in Progress"
 		
 	end
+
+
+	def self.get_all_post_ids
+		return Post.pluck(:id)
+	end
+
+
 end
+ 
