@@ -21,7 +21,7 @@ task :send_email => :environment do
 
 		begin			
 			record = MailedPost.find_or_create_by(post_id: post_id)
-	        send_email(post, "Go on..Just putting the cool post to learn from in your inbox. ", "Hi! When you are free have a look at : #{post.title}", users)
+	        send_email(post, "Go on...Just putting this cool post: #{post.title} in your inbox.", "Hi! When you are free have a look at : #{post.title}", users)
 	    rescue
 	    	p "email not sent "
 	    end

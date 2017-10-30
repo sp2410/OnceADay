@@ -45,7 +45,13 @@ class EmailNotifier
 
 	
 	def send 
-			begin	
+		use_sendgrid_to_send_email				
+	end
+
+	private
+
+	def use_sendgrid_to_send_email
+		begin	
 				tosend = personalize
 
 				sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])			
@@ -54,12 +60,11 @@ class EmailNotifier
 				puts response.body
 				puts response.headers			
 				return true
-			rescue 			
+		rescue 			
 				puts "Email Failure"			
 				return false
-			end			
-			
-		end
+		end	
+	end
 
 		
 end
