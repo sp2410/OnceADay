@@ -38,6 +38,11 @@
           </div>
 
           <div class="field">
+            <%= f.label :receive_email %><br />            
+            <%= f.select :receive_email, [['Yes', true], ['No', false]], :label => "Want to receive unread posts in your inbox once a day?"  %>
+          </div>
+
+          <div class="field">
             <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
             <%= f.password_field :current_password, autocomplete: "off" %>
           </div>
