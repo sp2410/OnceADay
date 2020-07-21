@@ -1,57 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ONCE A DAY</title>
+<head>
+  <title>ONCE A DAY</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108766751-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108766751-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-108766751-1');
-      </script>
+    gtag('config', 'UA-108766751-1');
+  </script>
 
 
-    <%= favicon_link_tag 'https://s3-us-west-2.amazonaws.com/wacbacassetsdonttouch/wacbacassets/onceadaylogo.png' %>
-    <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'https://s3-us-west-2.amazonaws.com/wacbacassetsdonttouch/wacbacassets/onceadaylogo.png' %>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"  lazyload>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  lazyload>    
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" >
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" async></script>
-	  
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" lazyload>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" lazyload>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" async></script>
+
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" lazyload>
 
 
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
   <meta name="description" content="Once a day is a blogging platform designed for enabling technical communications and sharing what you are learning with everyone.">
- <meta content="Once A Day Today Blog" property="og:title" />
+  <meta content="Once A Day Today Blog" property="og:title" />
 
+  <script data-ad-client="ca-pub-7912024902186521" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
 
- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-7912024902186521",
-    enable_page_level_ads: true
-  });
-</script>
-	
-  </head>
-
-  <body>
-
-    <%= render 'layouts/nav' %>  
-    
-    <%= yield %>
-  
-
-  </body>
+<body>
+  <%= render 'layouts/nav' %>
+  <%= yield %>
+</body>
 </html>
