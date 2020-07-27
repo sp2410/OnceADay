@@ -1,17 +1,14 @@
 Rails.application.routes.draw do
-    
+
   devise_for :users
-  resources :subjects do 
+  resources :subjects do
   	resources :posts do
-
       resources :sections
-
   		resources :videos
-		resources :audios
-		resources :codes
-		resources :paragraphs
-		resources :pictures
-
+		  resources :audios
+		  resources :codes
+		  resources :paragraphs
+		  resources :pictures
   	end
   end
 

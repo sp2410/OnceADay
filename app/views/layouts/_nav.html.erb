@@ -3,44 +3,51 @@
 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background: #e53c35;">
-        <span class="icon-bar" ></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
 
       <ul class="nav navbar-nav navbar-left">
         <li>
-          <%= image_tag("https://s3-us-west-2.amazonaws.com/wacbacassetsdonttouch/wacbacassets/onceadaylogo.png", :alt => "Once A Day", :size => "40x40") %>   
+          <%= image_tag("https://s3-us-west-2.amazonaws.com/wacbacassetsdonttouch/wacbacassets/onceadaylogo.png", :alt => "Once A Day", :size => "40x40") %>
         </li>
       </ul>
     </div>
 
-    <div class="collapse navbar-collapse" id="myNavbar">      
-         <ul class="nav navbar-nav navbar-right">        
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to "HOME", root_path %>
-        </li> 
+          <%= link_to "HOME/ABOUT", root_path %>
+        </li>
         <li>
-            <%= link_to "BROWSE", subjects_path %>
-        </li>                         
-
-        <% if current_user %>                         
-        
-          <li>
-            <%= link_to "MY POSTS", myposts_path %>
-          </li>                    
-          <li>
-            <%= link_to "PROFILE", edit_user_registration_path %>
-          </li>                     
-          <li>
-            <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete%>
-          </li>  
-          <% else %>                
-            <li>
-              <%= link_to "SIGN IN", new_user_session_path %>
-            </li>                 
-          <%end%>           
-      </ul>      
+          <%= link_to "BROWSE POSTS", subjects_path %>
+        </li>
+        <li>
+          <%= link_to "CLICK TO BUY CODE PLUGINS", "https://gumroad.com/sprakash24oct", target: "_blank" %>
+        </li>
+        <li>
+          <%= link_to "CLICK TO HIRE ME AS A MENTOR", "https://mentorcruise.com/mentor/sauravprakash/", target: "_blank" %>
+        </li>
+        <li>
+          <%= link_to "YOUTUBE VIDEOS", "https://www.youtube.com/channel/UCIy6V52H54uyuGUFm8J005g", target: "_blank" %>
+        </li>
+        <% if current_user %>
+        <li>
+          <%= link_to "MY POSTS", myposts_path %>
+        </li>
+        <li>
+          <%= link_to "PROFILE", edit_user_registration_path %>
+        </li>
+        <li>
+          <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete%>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to "SIGN IN", new_user_session_path %>
+        </li>
+        <%end%>
+      </ul>
     </div>
   </div>
 </nav>
