@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   match '/myposts', to: "subjects#myposts", via: :get
+  match '/courses', to: "courses#index", via: :get
   match '/home', to: "subjects#home", via: :get
 
   root "subjects#home"

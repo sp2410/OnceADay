@@ -1,6 +1,6 @@
 <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 40px; min-width: 100%">
-	<strong>
-		<h1 style="font-size: 50px; text-align: center; font-family: 'Merriweather', cursive;  padding: 10px; color: #e53c35; margin-bottom: 0px; ">
+  <strong>
+    <h1 style="font-size: 50px; text-align: center; font-family: 'Merriweather', cursive;  padding: 10px; color: #e53c35; margin-bottom: 0px; ">
       <%= @post.title.upcase %>
     </h1>
   </strong>
@@ -83,19 +83,5 @@
     <%= link_to 'Edit Post', edit_subject_post_path(@subject, @post), class: "btn btn-primary" %>
   </div>
   <% end %>
-  <section>
-    <div class="col-sm-12 col-md-12 col-lg-12" style="height: auto; background: #e53c35;">
-      <p style="font-size: 1em; text-align: center; font-family: 'Merriweather', cursive;  padding: 10px;  margin-bottom: 0px; color: white;">Owned & Maintained by <a href="https://www.linkedin.com/in/saurav-prakash-2a402335/" style="color: black;"> Saurav Prakash</a></p>
-      <p style="font-size: 0.7em; text-align: center; font-family: 'Merriweather', cursive;  padding: 10px;  margin-bottom: 1em; color: white;">If you like what you see, you can help me cover server costs or buy me a cup of coffee though donation :)</p>
-      <div className="paypalButton" style="text-align: center;">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_donations" />
-          <input type="hidden" name="business" value="sprakash24oct@gmail.com" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-          <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-        </form>
-      </div>
-    </div>
-  </section>
+  <%= render "subjects/footer"%>
 </div>
