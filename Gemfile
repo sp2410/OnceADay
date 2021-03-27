@@ -15,7 +15,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap_form'
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', '~> 1.3.2'
 gem 'mini_magick', '~> 4.3'
 gem "fog"
 gem 'figaro'
